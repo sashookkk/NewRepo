@@ -1,0 +1,37 @@
+﻿<Window x:Class="mdk0202.RequestEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mdk0202"
+        mc:Ignorable="d"
+        Title="RequestEdit" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <ComboBox x:Name="cbPartnerType" HorizontalAlignment="Left" Margin="134,61,0,0" VerticalAlignment="Top" Width="248" IsEditable="True" IsReadOnly="True"/>
+        <Label Content="Тип партнера" HorizontalAlignment="Left" Margin="21,59,0,0" VerticalAlignment="Top"/>
+        <Label Content="Наименование" HorizontalAlignment="Left" Margin="21,90,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbTitle" HorizontalAlignment="Left" Margin="134,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Height="22" IsReadOnly="True"/>
+        <Label Content="ФИО директора" HorizontalAlignment="Left" Margin="21,127,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbFIODir" HorizontalAlignment="Left" Margin="134,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Height="22" IsReadOnly="True"/>
+        <Label Content="Адрес" HorizontalAlignment="Left" Margin="21,163,0,0" VerticalAlignment="Top"/>
+        <Label Content="Рейтинг" HorizontalAlignment="Left" Margin="21,200,0,0" VerticalAlignment="Top"/>
+        <Label Content="Телефон" HorizontalAlignment="Left" Margin="21,231,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="21,266,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbAddress" HorizontalAlignment="Left" Margin="134,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Height="22" IsReadOnly="True"/>
+        <TextBox x:Name="tbRating" HorizontalAlignment="Left" Margin="134,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Height="22" IsReadOnly="True"/>
+        <TextBox x:Name="tbPhone" HorizontalAlignment="Left" Margin="134,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Height="22" IsReadOnly="True"/>
+        <TextBox x:Name="tbEmail" HorizontalAlignment="Left" Margin="134,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Height="22" IsReadOnly="True"/>
+        <ComboBox x:Name="cbPartner" HorizontalAlignment="Left" Margin="134,18,0,0" VerticalAlignment="Top" Width="248" SelectionChanged="cbPartner_SelectionChanged"/>
+        <Label Content="Выберите партнера" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="EditReqbtn" Content="Редактировать заявку" HorizontalAlignment="Left" Margin="151,339,0,0" VerticalAlignment="Top" Height="34" Width="136" Background="#FF0C4882" Foreground="White" Click="EditReqbtn_Click"/>
+        <ComboBox x:Name="cbProduct" HorizontalAlignment="Left" Margin="524,57,0,0" VerticalAlignment="Top" Width="248"/>
+        <Label Content="Выберите продукцию" HorizontalAlignment="Left" Margin="394,53,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="listProducts" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="413,91,25,142" Background="#FFBBDCFA"/>
+        <Label Content="Выберите количество" HorizontalAlignment="Left" Margin="394,18,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbAmount" HorizontalAlignment="Left" Margin="529,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" Height="22" PreviewTextInput="tbAmount_PreviewTextInput"/>
+        <Button x:Name="addbtn" Content="Добавить продукцию" HorizontalAlignment="Left" Margin="639,297,0,0" VerticalAlignment="Top" Height="26" Width="136" Background="#FF0C4882" Foreground="White" Click="addbtn_Click"/>
+        <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Right" Margin="0,374,25,0" VerticalAlignment="Top" Height="20" Width="77" Background="#FF0C4882" Foreground="White" Click="btnBack_Click"/>
+        <Button x:Name="btndelete" Content="Удалить продукцию" HorizontalAlignment="Left" Margin="413,297,0,0" VerticalAlignment="Top" Height="26" Width="136" Background="#FF0C4882" Foreground="White" Click="btndelete_Click"/>
+
+    </Grid>
+</Window>
